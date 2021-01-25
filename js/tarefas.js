@@ -24,19 +24,20 @@ btnAddTarefa.addEventListener('click', (e) => {
     }
 
     adicinarTarefa(tarefa);
+    
 });
 
 
 // Criando uma função para gerar ID aletoriamente
 function gerarID() {
-    return Math.floor(Math.random() * 30000);
+    return Math.floor(Math.random() * 3000);
 }
 
 // Função para adicinoar tarefas
 function adicinarTarefa(tarefa) {
 
     let li = criarTagLI(tarefa);
-    listaTarefa.appendChild(li);
+    listaTarefas.appendChild(li);
     inputNovaTarefa.value = '';
 }
 
@@ -54,10 +55,12 @@ function criarTagLI(tarefa) {
     let btnEditar = document.createElement('button');
     btnEditar.classList.add('btnAcao');
     btnEditar.innerHTML = '<i class="fa fa-pencil"></i>';
+    btnEditar.setAttribute('onclick', 'editar('+tarefa.id+')');
 
     let btnExcluir = document.createElement('button');
     btnExcluir.classList.add('btnAcao');
     btnExcluir.innerHTML = '<i class="fa fa-trash"></i>';
+    btnExcluir.setAttribute('onclick', 'excluir('+tarefa.id+')');
 
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
@@ -65,4 +68,15 @@ function criarTagLI(tarefa) {
     li.appendChild(span);
     li.appendChild(div);
     return li;
+}
+
+// Função Editar
+function editar(idTarefa) {
+    alert(idTarefa);
+}
+
+
+// Função Excluir
+function excluir(idTarefa) {
+    alert(idTarefa);
 }
