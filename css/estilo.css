@@ -52,10 +52,9 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    
 }
 
-#listaTarefas l1 {
+#listaTarefas li{
     padding: 20px;
     background: #191818;
     border-radius: 12px;
@@ -63,3 +62,21 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.btnAcao {
+    border-radius: 12px;
+    border-radius: 1px solid #191919;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    cursor: pointer;
+    background: #191818;
+    color: #FFF;
+}
+
+.btnAcao:hover {
+    background: #3E3A3A;
+}
+
+
+
